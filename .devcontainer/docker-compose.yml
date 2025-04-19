@@ -1,0 +1,12 @@
+
+services:
+  devcontainer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspaces:cached
+      - ${HOME}/.gitconfig:/home/vscode/.gitconfig:cached
+      - ${HOME}/.config/gh:/home/vscode/.config/gh:cached
+      - ${HOME}/.local/bin/gh:/home/vscode/.local/bin/gh:cached
+    command: sleep infinity
