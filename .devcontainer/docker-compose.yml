@@ -9,4 +9,13 @@ services:
       - ${HOME}/.gitconfig:/home/vscode/.gitconfig:cached
       - ${HOME}/.config/gh:/home/vscode/.config/gh:cached
       - ${HOME}/.local/bin/gh:/home/vscode/.local/bin/gh:cached
+      # Add WSLg volumes
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /mnt/wslg:/mnt/wslg
+    environment:
+      # Add WSLg environment variables
+      - DISPLAY
+      - WAYLAND_DISPLAY
+      - XDG_RUNTIME_DIR
+      - PULSE_SERVER
     command: sleep infinity
