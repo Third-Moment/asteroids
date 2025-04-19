@@ -1,0 +1,4 @@
+.config
+.gitconfig
+/books
+__pycache__*
